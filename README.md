@@ -14,10 +14,6 @@ them turn into floating 3D-style objects on screen.
   - `requirements.txt`
   - `images/` folder (apple.png, pen.png, egg.png)
 
-You do **NOT** need the `venv` folder if someone shares this with you —
-you'll create your own in step 2 below. (If you received a `venv` folder,
-you can safely delete it before installing.)
-
 ---
 
 ## 2. Installation (one-time setup)
@@ -87,8 +83,7 @@ or cursive writing.
 | Key | Action |
 |---|---|
 | `R` | Return to writing mode (clears the object and canvas) |
-| `C` | Clear the current drawing |
-| `Esc` or `Q` | Close the app |
+| `Esc` | Close the app |
 
 ---
 
