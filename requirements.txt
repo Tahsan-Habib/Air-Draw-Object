@@ -1,0 +1,23 @@
+# ==========================================================
+# Magic Objects - Python Dependencies
+# ==========================================================
+# How to install:
+#   1. Open Command Prompt / Terminal in this project folder
+#   2. Create a virtual environment:      python -m venv venv
+#   3. Activate it:
+#        Windows (cmd):        venv\Scripts\activate
+#        Windows (PowerShell): venv\Scripts\Activate.ps1
+#        Mac/Linux:            source venv/bin/activate
+#   4. Install everything below in one go:
+#        pip install -r requirements.txt
+# ==========================================================
+
+opencv-python      # camera access, drawing, image processing
+mediapipe           # hand tracking (detects your fingers)
+easyocr              # reads the word you write in the air
+numpy                # math/array operations used throughout
+
+# NOTE: easyocr will automatically pull in PyTorch (torch + torchvision) too.
+# This is expected and required - PyTorch is what powers the handwriting
+# recognition. The full install is roughly 1GB - this is normal for any
+# project that uses AI-based OCR, not a mistake.

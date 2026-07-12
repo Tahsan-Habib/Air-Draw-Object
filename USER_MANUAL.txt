@@ -1,0 +1,178 @@
+================================================================
+                 MAGIC OBJECTS - AIR WRITING APP
+                       USER MANUAL
+================================================================
+
+Write words in the air using just your index finger (via webcam),
+and watch them turn into floating objects on screen.
+
+
+----------------------------------------------------------------
+1. WHAT YOU NEED
+----------------------------------------------------------------
+
+  - Python 3.9 or newer installed on your computer
+  - A webcam
+  - The full project folder, containing:
+
+        main.py
+        requirements.txt
+        images/  (folder with apple.png, pen.png, egg.png)
+
+
+----------------------------------------------------------------
+2. INSTALLATION (one-time setup)
+----------------------------------------------------------------
+
+  Open Command Prompt (Windows) or Terminal (Mac/Linux) inside
+  the project folder, then run these ONE AT A TIME:
+
+    python -m venv venv
+
+    venv\Scripts\activate            (Windows)
+    source venv/bin/activate         (Mac/Linux)
+
+    pip install -r requirements.txt
+
+  The install takes a few minutes and downloads about 1GB.
+  This is normal - it includes the AI model that powers the
+  handwriting recognition.
+
+
+----------------------------------------------------------------
+3. RUNNING THE APP
+----------------------------------------------------------------
+
+  With your virtual environment activated, run:
+
+    python main.py
+
+  A fullscreen camera window will open.
+
+  IMPORTANT: Click once anywhere inside that window with your
+  mouse BEFORE using any keyboard shortcut. This gives the
+  window keyboard focus. If R or Esc don't seem to respond,
+  this click is almost always the fix.
+
+
+----------------------------------------------------------------
+4. HOW TO USE IT - CONTROLS
+----------------------------------------------------------------
+
+  4.1  WRITING MODE  (default when you start)
+  ---------------------------------------------
+
+    WRITE
+        Point with your index finger only, keep your thumb
+        tucked in against your palm, and draw letters in
+        the air.
+
+    PAUSE (lift pen)
+        Stick your thumb OUT to the side while still
+        pointing. This lifts the "pen" so you can reposition
+        your hand without drawing a line. Useful for letters
+        like "P" where you need a gap between strokes.
+
+    RESUME WRITING
+        Tuck your thumb back in.
+
+    FINISH THE WORD / TRIGGER RECOGNITION
+        Open all 5 fingers (show your open palm). After
+        about 1-2 seconds, the app reads what you wrote and,
+        if it recognizes a valid word, the matching object
+        appears floating on screen.
+
+    TIP: Write in UPPERCASE-style block letters. Bigger,
+    blockier strokes are much easier to recognize correctly
+    than small or cursive writing.
+
+
+  4.2  OBJECT MODE  (after a word is recognized)
+  ---------------------------------------------
+
+    MOVE THE OBJECT
+        Move your index finger - the object follows your
+        hand.
+
+    WRITE ANOTHER WORD
+        Press "R" on your keyboard. This clears the screen
+        and returns you to Writing Mode.
+
+
+  4.3  PEN CUSTOMIZATION  (works anytime)
+  ---------------------------------------------
+
+    CHANGE PEN SIZE
+        Pinch your thumb and index finger together, hold
+        the pinch on the horizontal bar at the top of the
+        screen, then move your hand left (smaller) or right
+        (bigger).
+
+    CHANGE PEN COLOR
+        Pinch on the color circle icon (top-right of screen)
+        to open a small color palette, then pinch on any
+        color swatch to select it. Neon Blue is the default.
+
+
+  4.4  KEYBOARD SHORTCUTS
+  ---------------------------------------------
+
+        KEY            ACTION
+        -----          ------------------------------------
+        R              Return to writing mode (clears
+                        the object and canvas)
+        ESC            Close the app
+
+
+----------------------------------------------------------------
+5. CURRENTLY RECOGNIZED WORDS
+----------------------------------------------------------------
+
+  This is a TESTING / DEMO build with only 3 objects set up:
+
+        - apple
+        - pen
+        - egg
+
+  More words and objects can be added later by:
+
+    1. Adding a transparent PNG of the new object to the
+       images/ folder
+    2. Adding the word to the VALID_WORDS dictionary near
+       the top of main.py
+    3. Loading the new image into OBJECT_IMAGES the same
+       way apple/pen/egg are loaded
+
+
+----------------------------------------------------------------
+6. TROUBLESHOOTING
+----------------------------------------------------------------
+
+  Keyboard shortcuts not responding
+        -> Click once on the camera window with your mouse
+           first, then try again. The window needs focus to
+           receive key presses.
+
+  Word not recognized
+        -> Try writing bigger, in uppercase block letters,
+           with clear gaps between letters (use the
+           thumb-out pause between letters if needed).
+
+  Nothing happens when I open my hand
+        -> Make sure all 5 fingers are clearly spread and
+           visible to the camera, and hold the pose for a
+           moment.
+
+
+----------------------------------------------------------------
+7. ABOUT THIS PROJECT
+----------------------------------------------------------------
+
+  Built as a computer vision portfolio project using:
+        - MediaPipe   (hand tracking)
+        - EasyOCR     (handwriting recognition)
+        - OpenCV      (rendering)
+
+================================================================
+                        END OF MANUAL
+================================================================
